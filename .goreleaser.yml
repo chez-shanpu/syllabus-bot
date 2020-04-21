@@ -1,0 +1,17 @@
+builds:
+- id: "syllabusbot"
+
+  # Binary name.
+  binary: syllabusbot
+
+  # GOOS list to build for.
+  goos:
+  - linux
+  - darwin
+  - windows
+
+  # GOARCH to build for.
+  goarch:
+  - amd64
+  - arm
+  - arm64
