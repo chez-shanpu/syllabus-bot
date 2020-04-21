@@ -45,7 +45,6 @@ func CreateBoardRecord(i db.DBInfo, bi BoardInfo) error {
 	d.Create(&bi)
 	log.Printf("[INFO] Create Record: %v", bi)
 	return nil
-	return err
 }
 
 func GetBoardRecord(i db.DBInfo, checkSum string) (*BoardInfo, error) {
