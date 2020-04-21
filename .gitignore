@@ -18,3 +18,5 @@
 
 # Option
 .idea/*
+.env
+*.db

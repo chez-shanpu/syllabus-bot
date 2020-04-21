@@ -2,6 +2,7 @@ package slack
 
 import (
 	"bytes"
+	"log"
 	"net/http"
 )
 
@@ -10,8 +11,10 @@ type Data struct {
 }
 
 func PostMessage(d Data, endpoint string) error {
-	jsonStr := `{"data":"` + d.Text + `"}`
+	jsonStr := `{"text":"` + d.Text + `"}`
 
+	log.Printf("[INFO] Json Payload: %#v", jsonStr)
+	log.Printf("[INFO] endpoint: %s", endpoint)
 	req, err := http.NewRequest(
 		"POST",
 		endpoint,
